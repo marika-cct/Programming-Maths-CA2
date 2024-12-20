@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// https://github.com/marika-cct/Programming-Maths-CA2
+
 public class Task5 {
     public static void main(String[] args) {
         // I am using the scanner class to take and use user input
@@ -17,7 +19,7 @@ public class Task5 {
         while (!correctInput) {
             try {
                 // Asking user to input their desired array size
-                System.out.print("Enter desired array size: ");
+                System.out.print("Enter a size for your array: ");
                 // Using scanner.nextInt() I am saving the next int input from the user as the variable n
                 n = scanner.nextInt();
                 // Once the correct input is given we can set correctInput as true to leave the loop
@@ -37,7 +39,7 @@ public class Task5 {
         while (!correctValues){
             try{
                 // Just like above, I am asking the user to input the elements of their array
-                System.out.print("Enter " + n + " elements for your array each on single line: ");
+                System.out.print("Enter " + n + " elements for your array on one line with space between them: ");
                 // Here I am iterating through the response from the user and setting each of the numbers input as
                 // elements of the array. The user needs to input a number per line.
                 for (int i = 0; i < n; i++){
