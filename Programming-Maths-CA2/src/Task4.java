@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// https://github.com/marika-cct/Programming-Maths-CA2
+
 public class Task4 {
     public static void main(String[] args) {
         // I am using the scanner class to take and use user input
@@ -17,7 +19,7 @@ public class Task4 {
         while (!correctInput) {
             try {
                 // Asking user to input their desired array size
-                System.out.print("Enter desired squared matrix size: ");
+                System.out.print("Enter a size for your squared matrix: ");
                 // Using scanner.nextInt() I am saving the next int input from the user as the variable n
                 n = scanner.nextInt();
                 // Once the correct input is given we can set correctInput as true to leave the loop
@@ -37,7 +39,7 @@ public class Task4 {
         while (!correctValues) {
             try {
                 // Just like above, I am asking the user to input the elements of their array
-                System.out.print("Enter " + n + " elements for your squared matrix each on single line: ");
+                System.out.print("Enter " + n + " elements row by row: ");
                 // Here I am iterating through the response from the user and setting each of the numbers input as
                 // elements of my 2D array. The first for is iterating through the row and the inner for is for the
                 // column level, saving each element by element.
@@ -56,7 +58,7 @@ public class Task4 {
         }
 
         // Printing the results to the user, using my two methods that calculate the main and secondary diagonals.
-        System.out.println("The spiral traverse order: " + Arrays.toString(spiralArray(squareMatrix, n)));
+        System.out.println("The spiral traverse order is as follows: " + Arrays.toString(spiralArray(squareMatrix, n)));
 
         // closing scanner
         scanner.close();
