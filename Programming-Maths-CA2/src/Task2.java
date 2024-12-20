@@ -1,6 +1,8 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// https://github.com/marika-cct/Programming-Maths-CA2
+
 public class Task2 {
     public static void main(String[] args) {
         // I am using the scanner class to take and use user input
@@ -15,7 +17,7 @@ public class Task2 {
         while (!correctInput) {
             try {
                 // Asking user to input their desired array size
-                System.out.print("Enter desired array size: ");
+                System.out.print("Enter a size for your array: ");
                 // Using scanner.nextInt() I am saving the next int input from the user as the variable n
                 n = scanner.nextInt();
                 // Once the correct input is given we can set correctInput as true to leave the loop
