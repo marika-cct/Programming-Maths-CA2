@@ -1,5 +1,7 @@
 import java.util.*;
 
+// https://github.com/marika-cct/Programming-Maths-CA2
+
 public class Task3 {
     public static void main(String[] args) {
         // I am using the scanner class to take and use user input
@@ -15,7 +17,7 @@ public class Task3 {
         while (!correctInput) {
             try {
                 // Asking user to input their desired array size
-                System.out.print("Enter desired squared matrix size: ");
+                System.out.print("Enter a size for your squared matrix: ");
                 // Using scanner.nextInt() I am saving the next int input from the user as the variable n
                 n = scanner.nextInt();
                 // Once the correct input is given we can set correctInput as true to leave the loop
@@ -35,7 +37,7 @@ public class Task3 {
         while (!correctValues) {
             try {
                 // Just like above, I am asking the user to input the elements of their array
-                System.out.print("Enter " + n + " elements for your squared matrix each on single line: ");
+                System.out.print("Enter " + n + " elements row by row: ");
                 // Here I am iterating through the response from the user and setting each of the numbers input as
                 // elements of my 2D array. The first for is iterating through the row and the inner for is for the
                 // column level, saving each element by element.
@@ -83,7 +85,10 @@ public class Task3 {
         // array. Inside the loop I am adding the element into the created variable, and at the end I return that
         // variable as the secondary diagonal sum.
         for (int i = n-1; i >= 0; i--){
-            secondaryDiag += a[i][i];
+            // For accessing the secondary diagonal I have to use the formula n-1-i, because on the anti-diagonal to
+            // access the first row element is done as so: [0, n-1], 2 row: [1, n-2], 3 row: [1, n-3], and so on. This means
+            // I have to use the formula of [n-1-i] to access the correct element in the column.
+            secondaryDiag += a[i][n-1-i];
         }
         // If there are no repeats we automatically return -1
         return secondaryDiag;
